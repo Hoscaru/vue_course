@@ -1,0 +1,100 @@
+/* Modern Dark Theme */
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --accent: #64ffda;
+    --accent-hover: #4adbb8;
+    --highlight: #bb86fc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+}
+
+/* Card Component */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(83, 150, 226, 0.7);
+}
+
+.card-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--accent);
+    border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+    padding-bottom: 12px;
+}
+
+/* Info Groups */
+.info-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.value {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.sub-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-left: 8px;
+}
+
+/* Interactive Elements */
+.link {
+    color: var(--accent);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.link:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.highlight {
+    color: var(--highlight);
+    font-weight: bold;
+    font-size: 1.2rem;
+}

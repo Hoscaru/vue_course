@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app1.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <section id="about" class="card">
+            <header class="card-header">
+                <h2>Sobre mí</h2>
+            </header>
+            <div class="card-content">
+                <div class="info-group">
+                    <p class="label">Nombre</p>
+                    <p class="value">{{ name }} {{ lastName }}</p>
+                </div>
+                <div class="info-group">
+                    <p class="label">Edad</p>
+                    <p class="value">{{ age }} años <span class="sub-text">(En 5 años tendré {{ age5years() }})</span>
+                    </p>
+                </div>
+                <div class="info-group">
+                    <p class="label">Intereses</p>
+                    <p class="value"><a v-bind:href="favoriteMovie" target="_blank" class="link">Jujutsu Kaisen</a> es
+                        mi película favorita.</p>
+                </div>
+                <div class="info-group">
+                    <p class="label">Número de la suerte</p>
+                    <p class="value highlight">{{ randomFavoriteNumber() }}</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
