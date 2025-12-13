@@ -16,19 +16,20 @@
         <section id="monster" class="container">
             <h2>Monster Health</h2>
             <div class="healthbar">
-                <div class="healthbar_value"></div>
+                <!-- v-bind is equal to : -->
+                <div class="healthbar__value" :style="monsterBarStyles"></div>
             </div>
         </section>
 
         <section id="player" class="container">
             <h2>Player Health</h2>
             <div class="healthbar">
-                <div class="healthbar_value"></div>
+                <div class="healthbar__value"  :style="playerBarStyles"></div>
             </div>
         </section>
 
         <section id="controls">
-            <button>Attack</button>
+            <button @click="attackMonster">Attack</button>
             <button>Special Attack</button>
             <button>Heal</button>
             <button>Surrender</button>
