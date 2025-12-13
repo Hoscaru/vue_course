@@ -28,11 +28,19 @@
             </div>
         </section>
 
-        <section id="controls">
+        <section id="game-over" class="container" v-if="winner">
+            <h2 >Game Over</h2>
+            <h3 v-if="winner === 'player'">Player Wins</h3>
+            <h3 v-else-if="winner === 'monster'">Monster Wins</h3>
+            <h3 v-else>Draw</h3>
+            <button @click="startNewGame">Start New Game</button>
+        </section>
+
+        <section id="controls" v-else>
             <button @click="attackMonster">Attack</button>
             <button :disabled="specialAttackAvailable" @click="specialAttackMonster">Special Attack</button>
-            <button>Heal</button>
-            <button>Surrender</button>
+            <button @click="healPlayer">Heal</button>
+            <button @click="surrender">Surrender</button>
         </section>
 
         <section id="log" class="container">
